@@ -34,7 +34,7 @@ function TodoProvider(props) {
     const completeTodo = (text) => {
         const todoIndex = todos.findIndex(todo => todo.text === text);
         const newTodos = [...todos];
-        (newTodos[todoIndex].completed === false)
+        (!newTodos[todoIndex].completed)
             ? newTodos[todoIndex].completed = true
             : newTodos[todoIndex].completed = false
         saveTodos(newTodos);
